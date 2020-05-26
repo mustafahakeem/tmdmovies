@@ -1,0 +1,210 @@
+<div class="main">
+  <!-- content -->
+  <!-- <section class="content">
+
+    <div class="post">
+     
+      <div class="post-inner">
+        <header>
+          <h2><a href="#">MovieTitle 1 Goes Here</a></h2>
+          <p class="tags"><a href="#">FAMILY</a> <a href="#">COMEDY</a> <a href="#">ANIMATION</a> </p>
+          <div class="cl">&nbsp;</div>
+        </header>
+        <div class="img-holder"> <a href="#"><img src="assets/css/images/post-img.jpg" alt=""></a> <a href="assets/css/images/post-img.jpg" class="btn-full-image popup"><span>FULL IMAGE</span></a> </div>
+      
+        <div class="meta">
+          <p class="date">APRIL 09, 2012 by <a href="#">JOHN DOE</a></p>
+          <div class="right">
+            <div class="rating-holder">
+              <p>RATING</p>
+              <div class="rating"> <span style="width: 100%;"></span> </div>
+            </div>
+            <a href="#" class="comments">59 comments</a> </div>
+          <div class="cl">&nbsp;</div>
+        </div>
+        
+      
+        <div class="post-cnt">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo orci vitae enim volutpat dapibus. Aliquam pharetra, odio eu luctus semper, dolor libero volutpat mi, sit amet convallis tortor justo eu nisl. Cras quis felis quis felis tempor volutpat id at dui. Donec vel turpis id odio tempus mollis quis vel justo. Etiam tortor nisi, pulvinar a mattis nec, luctus sit amet odio. Morbi id commodo ligula. </p>
+          <a href="#" class="more">CONTINUE READING</a> </div>
+       
+      </div>
+   
+    </div>
+    
+    
+    <div class="post">
+     
+      <div class="post-inner">
+        <header>
+          <h2><a href="#">MovieTitle 2 Goes Here</a></h2>
+          <p class="tags"><a href="#">FAMILY</a> <a href="#">COMEDY</a> <a href="#">ANIMATION</a> </p>
+          <div class="cl">&nbsp;</div>
+        </header>
+        <div class="img-holder"> <a href="#"><img src="assets/css/images/post-img2.jpg" alt=""></a> <a href="assets/css/images/post-img2.jpg" class="btn-full-image popup"><span>FULL IMAGE</span></a> </div>
+       
+        <div class="meta">
+          <p class="date">APRIL 09, 2012 by <a href="#">JOHN DOE</a></p>
+          <div class="right">
+            <div class="rating-holder">
+              <p>RATING</p>
+              <div class="rating"> <span style="width: 50%;"></span> </div>
+            </div>
+            <a href="#" class="comments">59 comments</a> </div>
+          <div class="cl">&nbsp;</div>
+        </div>
+      
+        <div class="post-cnt">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo orci vitae enim volutpat dapibus. Aliquam pharetra, odio eu luctus semper, dolor libero volutpat mi, sit amet convallis tortor justo eu nisl. Cras quis felis quis felis tempor volutpat id at dui. Donec vel turpis id odio tempus mollis quis vel justo. Etiam tortor nisi, pulvinar a mattis nec, luctus sit amet odio. Morbi id commodo ligula. </p>
+          <a href="#" class="more">CONTINUE READING</a> </div>
+      
+      </div>
+   
+    </div>
+   
+    <div class="post">
+     
+      <div class="post-inner">
+        <header>
+          <h2><a href="#">MovieTitle 3 Goes Here</a></h2>
+          <p class="tags"><a href="#">FAMILY</a> <a href="#">COMEDY</a> <a href="#">ANIMATION</a> </p>
+          <div class="cl">&nbsp;</div>
+        </header>
+        <div class="img-holder"> <a href="#"><img src="assets/css/images/post-img3.jpg" alt=""></a> <a href="assets/css/images/post-img3.jpg" class="btn-full-image popup"><span>FULL IMAGE</span></a> </div>
+     
+        <div class="meta">
+          <p class="date">APRIL 09, 2012 by <a href="#">JOHN DOE</a></p>
+          <div class="right">
+            <div class="rating-holder">
+              <p>RATING</p>
+              <div class="rating"> <span style="width: 70%;"></span> </div>
+            </div>
+            <a href="#" class="comments">59 comments</a> </div>
+          <div class="cl">&nbsp;</div>
+        </div>
+   
+        <div class="post-cnt">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo orci vitae enim volutpat dapibus. Aliquam pharetra, odio eu luctus semper, dolor libero volutpat mi, sit amet convallis tortor justo eu nisl. Cras quis felis quis felis tempor volutpat id at dui. Donec vel turpis id odio tempus mollis quis vel justo. Etiam tortor nisi, pulvinar a mattis nec, luctus sit amet odio. Morbi id commodo ligula. </p>
+          <a href="#" class="more">CONTINUE READING</a> </div>
+  
+      </div>
+ 
+    </div>
+   
+    <div class="pagination">
+      <ul>
+        <li class="laquo"><a href="#"><span></span></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="raquo"><a href="#"><span></span></a></li>
+        <li><a href="#">10</a></li>
+        <li class="dots">. . .</li>
+        <li><a href="#">last</a></li>
+      </ul>
+    </div>
+  </section> -->
+  <section class="content">
+    <div class="post">
+     
+      <div class="post-inner">
+
+        <h1>Latest Movies</h1>
+  
+          <!-- {{resData.results.popularity}} -->
+        <div *ngFor="let d of resData.results">
+          <h3>
+            {{d.title}}
+          </h3>
+          <img [src]="" width="100%" height="150px" />
+          {{d.poster_path}}
+         <p>
+            popularity: {{d.popularity}}
+         </p> 
+          <p>
+            Vote count: {{d.vote_count}}
+          </p>
+          <p>
+            Overview: {{d.overview}}
+          </p>
+          <p>
+            Release Date {{d.release_date}}
+          </p>
+          <p>
+            Movie id {{d.id}}
+          </p>
+          <input class="buttoon" type="number" [(ngModel)]="rate" placeholder="post rating" />
+          <button class="buttoon" (click)="postData(d.id)">Post Rating</button>
+          <button class="buttoon" (click)="deleteRate(d.id)">Delete Rating
+          </button>
+          <!-- <form [formGroup]="addRateForm" (ngSubmit)="editRate(d.id,rate)">
+            <mat-form-field appearance="standard">
+             <mat-label>Rate Movie</mat-label>
+                <input matInput placeholder="Enter rating" type="number" formControlName='rate'>
+            </mat-form-field>
+          </form>
+          <button class="empty_border_button" (click)="deleteRate(d.id)">Delete Rating
+          </button> -->
+
+        </div>
+          
+        <!-- <div *ngIf="moviesData">
+          dhc
+  
+          <div *ngFor="let n of moviesData"> -->
+             <!-- <h2>{{n.page}}</h2> -->
+            <!-- <p>
+              <i>PublishedBy:{{n.vote_count}} on </i><br>
+              <img [src]="n.urlToImage" width="100%" height="150px" />
+              
+            </p> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+  <aside class="sidebar">
+    <div class="widget">
+      <h3 class="widgettitle">Genres</h3>
+      <ul>
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Comedy</a></li>
+        <li><a href="#">Family</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Mystery</a></li>
+        <li><a href="#">Sci-Fi</a></li>
+        <li><a href="#">War</a></li>
+        <li><a href="#">Western</a></li>
+        <li><a href="#">Adventure</a></li>
+        <li><a href="#">Crime</a></li>
+        <li><a href="#">Fantasy</a></li>
+        <li><a href="#">Horror</a></li>
+        <li><a href="#">Thriller</a></li>
+      </ul>
+    </div>
+    <div class="widget">
+      <h3 class="widgettitle">Opening This Week</h3>
+      <ul>
+        <li><a href="#">The Hunter Games <strong>$98 Mil</strong></a></li>
+        <li><a href="#">American Reunion <strong>$50 Mil</strong></a></li>
+        <li><a href="#">Titanic <strong>$23 Mil</strong></a></li>
+        <li><a href="#">Wrath of the Titans <strong>$50 Mil</strong></a></li>
+        <li><a href="#">Mirror Mirro <strong>$7 Mil</strong></a></li>
+      </ul>
+    </div>
+    <div class="widget socials-widget">
+      <h3 class="widgettitle">Get Connected</h3>
+      <ul>
+        <li><a href="#" class="facebook-ico"><span></span>Facebook</a></li>
+        <li><a href="#" class="twitter-ico"><span></span>Twitter</a></li>
+        <li><a href="#" class="linkedin-ico"><span></span>Linkedin</a></li>
+        <li><a href="#" class="you-tube-ico"><span></span>Youtube</a></li>
+        <li><a href="#" class="rss-ico"><span></span>RSS</a></li>
+      </ul>
+    </div>
+  </aside>
+  <!-- end of sidebar -->
+  <div class="cl">&nbsp;</div>
+</div>
